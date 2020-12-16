@@ -3,12 +3,8 @@ export function autoPopulateAllFields(schema: any) {
   let arrayPaths = "";
   let arrayLength: any[] = [];
 
-  //checks every schema field path
   schema.eachPath(function process(pathname: string, schemaType: any) {
-    //if path is the id of the document, no need to check
     if (pathname == "_id") return;
-    // if (pathname === "likedPosts") $log.info("YOOO", schemaType.options, pathname);
-    //if the field path has an option "ref", add it in the paths
 
     if (schemaType.options.type[0]) {
       if (schemaType.options.type[0].ref) {
@@ -29,7 +25,6 @@ export function autoPopulateAllFields(schema: any) {
   schema.pre("findOne", handler);
   schema.pre("findById", handler);
 
-  //acts like a loop, it will populate all the field paths that have the option "ref"
   //TODO : fix the password for users
   function handler(next: any) {
     //@ts-ignore
