@@ -4,6 +4,9 @@
   "description": "A mongoose package helper that auto populates both an object and array of object references.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "repository": {
+    "url": "https://github.com/Khaalidsub/mongoose-autopopulator"
+  },
   "scripts": {
     "build": "tsc",
     "test": "echo \"No test Specified\""
