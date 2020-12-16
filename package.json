@@ -1,0 +1,17 @@
+{
+  "name": "mongoose-autopopulator",
+  "version": "1.0.0",
+  "description": "A mongoose package helper that auto populates both an object and array of object references.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"No test Specified\""
+  },
+  "author": "khaalidsub",
+  "license": "MIT",
+  "dependencies": {
+    "np": "^7.0.0",
+    "typescript": "^4.1.3"
+  }
+}
