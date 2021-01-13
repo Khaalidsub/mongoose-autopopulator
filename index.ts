@@ -18,14 +18,19 @@ export function autoPopulateAllFields(schema: any) {
   for (const document of arrayLength) {
     schema.pre("find", arrayHandler);
     schema.pre("findOne", arrayHandler);
+    schema.pre("save", arrayHandler);
+    schema.pre("update", arrayHandler);
+    schema.pre("updateOne", arrayHandler);
     schema.pre("findById", arrayHandler);
   }
 
   schema.pre("find", handler);
   schema.pre("findOne", handler);
+  schema.pre("save", handler);
+  schema.pre("update", handler);
+  schema.pre("updateOne", handler);
   schema.pre("findById", handler);
 
-  //TODO : fix the password for users
   function handler(next: any) {
     //@ts-ignore
     this.populate(paths);
